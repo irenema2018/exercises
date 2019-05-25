@@ -3,7 +3,7 @@ require 'sinatra'
 require 'sinatra/reloader'
 require 'pry'
 require 'httparty'
-APIKEY = "2f6435d9" 
+APIKEY = #APIKEY#
 
 require_relative 'db_config'
 require_relative 'models/movie'
