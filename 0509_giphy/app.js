@@ -1,8 +1,5 @@
-// var APIKEY = 'uD1m6cY440HNFI5AodIXOQyk8Xnz151G';
-
 var searchBtn = document.querySelector('#searchBtn');
 var input = document.querySelector('input');
-// var img = document.querySelector('img');
 var article = document.querySelector('article');
 var div = document.querySelector('div');
 
@@ -22,7 +19,7 @@ var handleClick = function (event) {
    event.preventDefault();
 
   var options = {
-    url: `http://api.giphy.com/v1/gifs/search?q=${input.value}&api_key=uD1m6cY440HNFI5AodIXOQyk8Xnz151G&limit=5`,
+    url: `http://api.giphy.com/v1/gifs/search?q=${input.value}&api_key=<APIKEY>&limit=5`,
   }
 
   var handleDone = function (res) {
