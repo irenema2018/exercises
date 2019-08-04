@@ -23,12 +23,13 @@ export default class TweetBox extends React.Component {
         const spanClass = content.length > 110 ?  'warning' : '' 
     
         return (
-            <div style = {{ width: "155px" }}>
-                {ProgressBar(content.length / maxContentLength * 100)}
+            <div style = {{ width: "200px" }}>
+                            {/* parameter percent  */}
+                {ProgressBar(content.length / maxContentLength * 100)} 
                 <textarea
                     onChange = {this.handleChange}
                     placeholder = "type something..."
-                    row = "7"
+                    row = "2"
                 ></textarea>
                 <footer>
                     <span className={spanClass}>{maxContentLength - content.length}</span>
