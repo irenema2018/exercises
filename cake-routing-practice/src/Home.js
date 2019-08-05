@@ -5,10 +5,7 @@ export default function Home() {
   return (
     <div>
       <h1>Choose your favourtie cake type!</h1>
-      <Link to='/vote'>Show me how much you love cake</Link>
+      <Link to='/vote'>Show me which one you like most</Link>
     </div>
-
-
   )
-
 }
