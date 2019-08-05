@@ -1,5 +1,4 @@
 import React from 'react';
-
 import './App.css';
 import Home from './Home'
 import CakeTypes from './CakeTypes'
@@ -8,17 +7,6 @@ import About from './About'
 import Vote from './Vote'
 import {Link, Switch, Route} from 'react-router-dom'
 
-
-
-// function App() {
-//   return (
-//     <div className="App">
-      
-//     </div>
-//   );
-// }
-
-// export default App;
 
 export default class App extends React.Component {
   state = {
@@ -51,8 +39,10 @@ export default class App extends React.Component {
 
         <Switch>
           <Route exact path="/" component={Home} />
+          {/* render methods: 1 Route component 2 Route render 3 Route children */}
+          {/* render methods will be passed the same three route props. 1.match 2. location 3.history */}
           <Route exact path="/caketypes" render= {() => <CakeTypes cakeTypes={cakeTypes} />} />
-          <Route path="/caketypes/:name" render={
+          <Route path="/caketypes/:filling" render={
              (props) => <CakeType match={props.match} cakeTypes={cakeTypes} />} />
           <Route path="/about" component={About} />
           <Route path="/vote" component={Vote} />

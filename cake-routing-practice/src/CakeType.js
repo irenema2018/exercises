@@ -3,12 +3,12 @@ import React from 'react'
 export default function CakeType (props) {
     console.log(props.match)    // an object in the Route. It has 
                                 // isExact: true
-                                // params: {name: "buttercream"}
-                                // path: "/caketypes/:name"
+                                // params: {filling: "buttercream"}
+                                // path: "/caketypes/:filling"
                                 // url: "/caketypes/buttercream"
-    console.log(props.match.params) //  {name: "buttercream"}
+    console.log(props.match.params) //  {filling: "buttercream"}
 
-    var cakeTypeVoted = props.cakeTypes.filter( (cakeType) => props.match.params.name === cakeType.name) // an array, eg: {name: "buttercream", cakeBase: "sponge cake"}
+    var cakeTypeVoted = props.cakeTypes.filter( (cakeType) => props.match.params.filling === cakeType.name) // an array, eg: {name: "buttercream", cakeBase: "sponge cake"}
     
     return (
         <section>

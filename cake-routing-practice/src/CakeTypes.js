@@ -9,13 +9,12 @@ export default function CakeTypes (props) {
 
     return (
         <section>
-         
             {props.cakeTypes.map( (cakeType, index) =>
+                // key is for react. each child should have an unique key.
                 <p key = {index}>
                     <Link to={`/caketypes/${cakeType.name}`}>{cakeType.name}</Link>
                 </p>
             )}
         </section>
     )
-
 }
