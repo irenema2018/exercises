@@ -4,7 +4,7 @@ A simple routing practice.
 
 ### 1. Used the library react-router-dom. 
 
-### 2. Used Switch, Link, Route object in the library.
+### 2. Used three objects - Switch, Link, Route in the library.
 
 ### 3. Route render methods
 There are 3 ways to render something with a <Route>:
