@@ -21,16 +21,18 @@ export default function BankAccount (props) {
   //   }
   // }
 
-  const [type, setType]                             = useState(props.type)
   const [balance, setBalance]                       = useState(0)
   const [transactionHistory, setTransactionHistory] = useState([])
   const [amount, setAmount]                         = useState(0)
 
 
-  const getType = () => {
-    // return this.state.type
-    return type
-  }
+  // function getType () {
+  //   return type
+  // }
+  // const getType = () => {
+  //   // return this.state.type
+  //   return type
+  // }
 
   const withdraw = () => {
     // this.setState({
@@ -38,9 +40,9 @@ export default function BankAccount (props) {
     //   // [...arr, newElement]
     //   transactionHistory: [...this.state.transactionHistory, 'Withdraw ( ' + this.state.amount + ' )' ]
     // })  
-    return setBalance(Number(balance) - Number(amount)),
-           setTransactionHistory([...transactionHistory, 'Withdraw ( ' + amount + ' )' ])
-
+    setBalance(Number(balance) - Number(amount))
+    setTransactionHistory([...transactionHistory, 'Withdraw ( ' + amount + ' )' ])
+    //                            origianl array       +  new element
   }
 
   const deposit = () => {
@@ -48,28 +50,28 @@ export default function BankAccount (props) {
     //   balance: Number(this.state.balance) + Number(this.state.amount),
     //   transactionHistory: [...this.state.transactionHistory, 'Deposit (' + this.state.amount + ')' ]
     // })   
-    return setBalance(Number(balance) + Number(amount)),
-           setTransactionHistory([...transactionHistory, 'Deposit ( ' + amount + ' )' ])
+    setBalance(Number(balance) + Number(amount))
+    setTransactionHistory([...transactionHistory, 'Deposit ( ' + amount + ' )' ])
 
   }  
 
-  const showBalance = () => {
-    // return this.state.balance
-    return balance
-  }
+  // const showBalance = () => {
+  //   // return this.state.balance
+  //   return balance
+  // }
   
   const handleChange = (event) => {
     // this.setState({
     //   amount: event.target.value
     // })
-    setAmount(event.target.value)
+     setAmount(event.target.value)
   }
     
   // render () {
     return (
       <div>
         {/* <p>Bank Account Type: {this.getType()}</p> */}
-        <p>Bank Account Type: {getType()}</p>
+        <p>Bank Account Type: {props.type}</p>
         <input 
           type="text"
           // onChange={this.handleChange}
@@ -82,7 +84,7 @@ export default function BankAccount (props) {
         {/* <button onClick={this.deposit}>Deposit</button> */}
         <button onClick={deposit}>Deposit</button>
         {/* <p>Current Balance: {this.showBalance()}</p> */}
-        <p>Current Balance: {showBalance()}</p>
+        <p>Current Balance: {balance}</p>
         {/* <p>Transaction History: {this.state.transactionHistory.join(', ')}</p> */}
         <p>Transaction History: {transactionHistory.join(', ')}</p>
       </div>
