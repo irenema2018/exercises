@@ -7,10 +7,8 @@ export default function ProgressBar (percent) {
   } 
 
   return (
-    <div>
-      <div className="myProgress">
+    <div className="myProgress">
         <div className="myBar" style={{ width: `${percent}%`}}></div>
-      </div>
     </div>
   )
 }
