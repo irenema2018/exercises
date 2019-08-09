@@ -43,10 +43,6 @@ export default function TweetBox () {
                     <button disabled={isDisabled}>tweet</button>
                 </footer>
             </div>
-        )
-    
-    
+        )       
     // }
-
-
 }
